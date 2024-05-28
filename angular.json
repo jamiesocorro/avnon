@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "avnon:build:production"
+              "buildTarget": "avnon:build:production"
             },
             "development": {
-              "browserTarget": "avnon:build:development"
+              "buildTarget": "avnon:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "avnon:build"
+            "buildTarget": "avnon:build"
           }
         },
         "test": {
