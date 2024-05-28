@@ -1,4 +1,4 @@
-import { Component, computed, input, model, signal } from '@angular/core';
+import { Component, signal, effect } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,9 @@ export class AppComponent {
   title = 'avnon';
 
   openModal = signal<boolean>(false);
-
   titleHeader = signal<string>('');
-
   content = signal<string>('');
+  image = signal<any>(null);
 
   onTextChange(e: any) {
     this.titleHeader.set(e.target.value);

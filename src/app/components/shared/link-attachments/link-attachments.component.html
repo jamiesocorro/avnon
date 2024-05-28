@@ -1,21 +1,37 @@
-<div class="border border-1 border-[#eaeaea]">
+<div>
 
     <div class="flex items-center gap-4 px-4 py-2">
         <div class="flex items-center cursor-pointer">
             <span class=" material-icons-outlined">close</span>
         </div>
-        <div class="flex items-center cursor-pointer">
-            <span class="material-icons-outlined mr-1">image</span>
-            <div>Image</div>
+        <div class="bg-[#f9f9f9] flex w-96 p-2">
+            <div class="flex items-center cursor-pointer w-1/3 flex-col" for="input">
+                <div class="flex items-center">
+                    <label for="image()" class="flex items-center cursor-pointer"><span
+                            class="material-icons-outlined mr-1">image</span>
+                        <div>Image</div>
+                    </label>
+                    <input id="image()" (change)="onImageUpload($event)" type="file" accept="image/*">
+                </div>
+
+
+            </div>
+            <div class="flex items-center cursor-pointer w-1/3 flex-col">
+                <div class="flex items-center">
+                    <span class=" material-icons-outlined mr-1">videocam</span>
+                    <div>Video</div>
+                </div>
+
+            </div>
+            <div class="flex items-center cursor-pointer w-1/3 flex-col">
+                <div class="flex items-center">
+                    <span class=" material-icons-outlined mr-1">link</span>
+                    <div>Link</div>
+                </div>
+
+            </div>
         </div>
-        <div class="flex items-center cursor-pointer">
-            <span class=" material-icons-outlined mr-1">videocam</span>
-            <div>Video</div>
-        </div>
-        <div class="flex items-center cursor-pointer">
-            <span class=" material-icons-outlined mr-1">link</span>
-            <div>Link</div>
-        </div>
+
     </div>
 
 
