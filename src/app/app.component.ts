@@ -1,4 +1,4 @@
-import { Component, input, model, signal } from '@angular/core';
+import { Component, computed, input, model, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +11,15 @@ export class AppComponent {
   openModal = signal<boolean>(false);
 
   titleHeader = signal<string>('');
-  description = signal<string>('');
+
+  content = signal<string>('');
 
   onTextChange(e: any) {
     this.titleHeader.set(e.target.value);
   }
 
   onDescriptionChange(e: any) {
-    this.description.set(e.target.textContent);
+    this.content.set(e.target.innerHTML);
   }
 
   onOpenModal() {
